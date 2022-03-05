@@ -1,6 +1,6 @@
 let result = document.querySelector('#results')
 
-const random = ['rock', 'paper', 'scissors'];
+const random = ['bulbasaur', 'charmander', 'squirtle'];
 
 let playerScore = 0
 let computerScore = 0
@@ -32,17 +32,17 @@ const playRound = () => {
 	
 	if(playerSelection === computerSelection ){	
 		return "It's a Tie!"
-	} else if (playerSelection === 'rock' && computerSelection === 'scissors' || playerSelection === 'paper' && computerSelection === 'rock' || playerSelection === 'scissors' && computerSelection === 'paper'){
+	} else if (playerSelection === 'bulbasaur' && computerSelection === 'squirtle' || playerSelection === 'charmander' && computerSelection === 'bulbasaur' || playerSelection === 'squirtle' && computerSelection === 'charmander'){
 		playerScore++	
-		return "You have won! :)"
-	} else  if (computerSelection === 'rock' && playerSelection === 'scissors' || computerSelection === 'paper' && playerSelection === 'rock' || computerSelection === 'scissors' && playerSelection === 'paper') {
+		return "You won this round"
+	} else  if (computerSelection === 'bulbasaur' && playerSelection === 'squirtle' || computerSelection === 'charmander' && playerSelection === 'bulbasaur' || computerSelection === 'squirtle' && playerSelection === 'charmander') {
 		computerScore++	
-		return 'Sorry, you lose :('
+		return 'You lost this round'
 	}
 }
 
 function updateGame() {
-	result.textContent = `Player has chosen ${playerSelection} || Computer has chosen ${computerSelection}`
+	result.textContent = `You chose ${playerSelection} - Computer chose ${computerSelection}`
 	result.appendChild(document.createElement('p')).innerHTML = `${playRound()}`
 	document.querySelector('#playerScore').textContent = `Player: ${playerScore}`
 	document.querySelector('#computerScore').textContent = `Computer: ${computerScore}`
@@ -50,9 +50,9 @@ function updateGame() {
 
 function game() {
 	if(playerScore >= 5 ) {
-		return "You are the Winner!"
+		return "You won the battle!"
 	} else if (computerScore >= 5) {
-		return "Sorry, you have lost the game!"
+		return "Sorry, you have lost the battle"
 	}
 }
 

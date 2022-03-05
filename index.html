@@ -4,33 +4,46 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
 	<title>Rock Paper Scissors</title>
 </head>
 <body>
-	<section class="card">
-
-		<section class="heading">
-			<h1>Rock Paper Scissors</h1>
-			<h2 class="choose">
-				Choose Your Weapon!
-			</h2>
-		</section>
-
-		<section id="container">
-			<button id="rock">Rock</button>
-			<button id="paper">Paper</button>
-			<button id="scissors">Scissors</button>
+	<section class="cards">
+		<h1>Choose Your Pokemon!</h1>
+		<figure class="card bulbasaur">
+			<div class="card__image-container">
+				<img src="https://img.pokemondb.net/sprites/home/normal/bulbasaur.png" alt="Bulbasaur"">
+				<button id="bulbasaur">Bulbasaur</button>
+			</div>
 			
-			<div id="results">
-				
+		</figure>
+
+		<figure class="card charmander">
+			<div class="card__image-container">
+				<img src="https://img.pokemondb.net/sprites/home/normal/charmander.png" alt="Charmander">
+				<button id="charmander">Charmander</button>
+			</div>
+			
+		</figure>
+
+		<figure class="card squirtle">
+			<div class="card__image-container">
+				<img src="https://img.pokemondb.net/sprites/home/normal/squirtle.png" alt="Squirtle"">
+				<button id="squirtle">Squirtle</button>
+			</div>
+			
+		</figure>
+	</section>
+
+		<section id="container">			
+			<div id="results">			
 			</div>
 			<div id="score">
 				<span id="playerScore"></span>
 				<span id="computerScore"></span>
 			</div>
 		</section>
-
-	</section>
+		<a href="./index.html">Reset</a>
 	<script src="./main.js"></script>
 </body>
 </html>
